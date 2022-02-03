@@ -1,5 +1,5 @@
-# semana-react
-
-Semana React Sujeito Programador
+# Calculator IMC
 
 ### Criando uma calculadora IMC
+
+#### Semana React Sujeito Programador
