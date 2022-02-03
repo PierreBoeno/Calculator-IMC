@@ -25,29 +25,50 @@ export default function App() {
     }
   }
 
+  function teste() {
+    alert("Resetar");
+  }
+
   return (
     <div className="app">
       <h1>Calculadora IMC</h1>
-      <span>Vamos calcular seu IMC</span>
+      <h3>Vamos calcular seu IMC</h3>
 
       <div className="area-input">
+        <label for="altura"> Altura</label>
         <input
-          type="text"
-          placeholder="Peso em (kg)"
-          value={peso}
-          onChange={(e) => setPeso(e.target.value)}
-        />
-        <input
-          type="text"
+          type="number"
+          min="0"
+          max="300"
+          id="altura"
+          name="altura"
           placeholder="Altura em (cm)"
           value={altura}
           onChange={(e) => setAltura(e.target.value)}
         />
 
-        <button onClick={calcularIMC}>Calcular</button>
+        <label for="peso"> Peso</label>
+        <input
+          type="number"
+          min="0"
+          max="200"
+          id="peso"
+          name="peso"
+          placeholder="Peso em (kg)"
+          value={peso}
+          onChange={(e) => setPeso(e.target.value)}
+        />
+        <div className="buttons">
+          <button className="btn-grad" onClick={calcularIMC}>
+            Calcular
+          </button>
+          <button className="btn-grad" onclick={teste}>
+            Resetar
+          </button>
+        </div>
       </div>
 
-      <h2>{mensagem}</h2>
+      <h3>{mensagem}</h3>
     </div>
   );
 }
