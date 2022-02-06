@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./app.css";
+import "./App.css";
 
 export default function App() {
   const [peso, setPeso] = useState("");
@@ -62,7 +62,7 @@ export default function App() {
           <button className="btn-grad" onClick={calcularIMC}>
             Calcular
           </button>
-          <button className="btn-grad" onclick={teste}>
+          <button className="btn-grad" onClick={teste}>
             Resetar
           </button>
         </div>
